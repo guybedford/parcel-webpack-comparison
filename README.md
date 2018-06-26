@@ -1,25 +1,35 @@
 # Parcel / Webpack Comparison
 
+Comparing the bundle sizes of Webpack and Parcel, using Parcel's new tree shaking mode. Non-shaken Parcel bundles are
+included as a point of comparison.
+
 ## Preliminary results
 
-101kb using new parcel tree shaker (React, Lodash), time 7.62s (with caching)
-501kb using old parcel build (React, Lodash), time 2s (with caching)
-What about webpack? 198kb (React, Lodash), time 15.268s
+**Using ES6 Libs** (Lodash-es + React)
 
-USING ES6 LIBS (React, Lodash-es)
+| Bundler                | Size          | Time   |
+| ---------------------- |:-------------:| ------:|
+| Webpack                | 198kb         | 15.26s |
+| Parcel + tree shaking  | 101kb         | 5.27s |
+| Parcel (old)           | 501kb         | 3.08s |
 
-compile-webpack:        198kb  | 15.268s
-compile-parcel:         101kb  | 5.27s
-compile-parcel-basic:   501kb  | 3.08s
 
-PLAIN LODASH (React, Lodash)
+**Using Non-ES6 Libs** (Lodash plan + React)
 
-compile-webpack:        170kb
-compile-parcel:         192kb
-compile-parcel-basic:   192kb
+| Bundler                | Size          |
+| ---------------------- |:-------------:|
+| Webpack                | 170kb         |
+| Parcel + tree shaking  | 192kb         |
+| Parcel (old)           | 192kb         |
 
-THREE.JS APP
+**Three.js app**
 
-compile-webpack:        543kb
-compile-parcel:         518kb
-compile-parcel-basic:   535kb
+| Bundler                | Size          |
+| ---------------------- |:-------------:|
+| Webpack                | 543kb         |
+| Parcel + tree shaking  | 518kb         |
+| Parcel (old)           | 535kb         |
+
+## Reproducing these results
+
+You can use the NPM scripts defined in package.json to run each build. Compiled bundles will land in a `dist/` folder.
