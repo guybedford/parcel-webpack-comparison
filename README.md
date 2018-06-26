@@ -17,7 +17,7 @@ be better optimized by Webpack.
 | Parcel (old)           | 501kb         | 3.08s |
 
 
-**Using Non-ES6 Libs** (Lodash plan + React)
+**Using Non-ES6 Libs** (plain Lodash + React)
 
 | Bundler                | Size          |
 | ---------------------- |:-------------:|
