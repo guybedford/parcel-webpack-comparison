@@ -1,5 +1,9 @@
 module.exports = {
-    entry: './src/index.tsx',
+    entry: {
+        basic: './src/basic.tsx',
+        plainLodash: './src/plainLodash.tsx',
+        threeApp: './src/threeApp.tsx'
+    },
     module: {
         rules: [
             {
@@ -13,8 +17,7 @@ module.exports = {
         extensions: [ '.tsx', '.ts', '.js' ]
     },
     output: {
-        path: __dirname + '/dist',
-        filename: 'index_bundle.js'
+        path: __dirname + '/dist'
     },
     plugins: []
 };
