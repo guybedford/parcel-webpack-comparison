@@ -5,6 +5,9 @@ included as a point of comparison.
 
 ## Preliminary results
 
+tl;dr - Parcel can create smaller bundles when using purely ES6 module / CommonJS module code. Other dependencies might
+be better optimized by Webpack.
+
 **Using ES6 Libs** (Lodash-es + React)
 
 | Bundler                | Size          | Time   |
