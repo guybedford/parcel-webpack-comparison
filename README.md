@@ -23,9 +23,3 @@ THREE.JS APP
 compile-webpack:        543kb
 compile-parcel:         518kb
 compile-parcel-basic:   535kb
-
-MICRO APP (trkl, preact)
-
-compile-webpack:        ---kb  | --.--s
-compile-parcel:         ---kb  | --.--s
-compile-parcel-basic:   ---kb  | --.--s
