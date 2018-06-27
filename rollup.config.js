@@ -3,6 +3,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import resolve from 'rollup-plugin-node-resolve';
 import typescript from 'rollup-plugin-typescript';
 import alias from 'rollup-plugin-alias';
+import { terser } from 'rollup-plugin-terser';
 
 export default [
 	{
@@ -17,7 +18,10 @@ export default [
 				'react-dom': path.resolve('node_modules/react-dom/cjs/react-dom.production.min.js')
 			}),
 			resolve({ browser: true }),
-			commonjs()
+			commonjs(),
+			terser({
+				compress: true
+			})
 		],
 		output: {
 			file: 'dist/basic.js',
@@ -41,6 +45,9 @@ export default [
 				namedExports: {
 					'lodash': ['deburr']
 				}
+			}),
+			terser({
+				compress: true
 			})
 		],
 		output: {
@@ -59,7 +66,10 @@ export default [
 				three: path.resolve('node_modules/three/build/three.module.js')
 			}),
 			resolve({ browser: true }),
-			commonjs()
+			commonjs(),
+			terser({
+				compress: true
+			})
 		],
 		output: {
 			file: 'dist/threeApp.js',

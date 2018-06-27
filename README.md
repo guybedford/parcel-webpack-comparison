@@ -15,6 +15,7 @@ be better optimized by Webpack.
 | Webpack                | 198kb         | 15.26s |
 | Parcel + tree shaking  | 101kb         | 5.27s |
 | Parcel (old)           | 501kb         | 3.08s |
+| Rollup                 | 225kb         ||
 
 
 **Using Non-ES6 Libs** (plain Lodash + React)
@@ -24,6 +25,7 @@ be better optimized by Webpack.
 | Webpack                | 170kb         |
 | Parcel + tree shaking  | 192kb         |
 | Parcel (old)           | 192kb         |
+| Rollup                 | 177kb         ||
 
 **Three.js app**
 
@@ -32,6 +34,7 @@ be better optimized by Webpack.
 | Webpack                | 543kb         |
 | Parcel + tree shaking  | 518kb         |
 | Parcel (old)           | 535kb         |
+| Rollup                 | 555kb         ||
 
 ## Reproducing these results
 
