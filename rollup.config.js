@@ -20,7 +20,12 @@ export default [
 			resolve({ browser: true }),
 			commonjs(),
 			terser({
-				compress: true
+				compress: {
+					global_defs: {
+						'process.env.NODE_ENV': '"production"'
+					},
+				},
+				mangle: true
 			})
 		],
 		output: {
@@ -47,7 +52,12 @@ export default [
 				}
 			}),
 			terser({
-				compress: true
+				compress: {
+					global_defs: {
+						'process.env.NODE_ENV': '"production"'
+					},
+				},
+				mangle: true
 			})
 		],
 		output: {
@@ -68,7 +78,12 @@ export default [
 			resolve({ browser: true }),
 			commonjs(),
 			terser({
-				compress: true
+				compress: {
+					global_defs: {
+						'process.env.NODE_ENV': '"production"'
+					},
+				},
+				mangle: true
 			})
 		],
 		output: {
